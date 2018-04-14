@@ -7,5 +7,8 @@ class Book(models.Model):
   publisher = models.CharField('出版社', max_length=255, blank=True)
   page = models.IntegerField('ページ数', blank=True, default=0)
 
+  def __str__(self):
+    return self.name
+
 class Impresstion(models.Model):
   """感想"""
