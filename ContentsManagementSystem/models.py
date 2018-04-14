@@ -12,4 +12,4 @@ class Book(models.Model):
 
 class Impresstion(models.Model):
   """感想"""
-  comment = models.TextField('コメント')
+  comment = models.TextField('コメント', blank=True)
