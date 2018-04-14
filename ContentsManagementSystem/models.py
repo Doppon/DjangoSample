@@ -12,4 +12,5 @@ class Book(models.Model):
 
 class Impresstion(models.Model):
   """感想"""
+  book = models.ForeignKey(Book, verbose_name='書籍', related_name='impressions', on_delete=models.CASCADE)
   comment = models.TextField('コメント', blank=True)
